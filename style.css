@@ -1,0 +1,190 @@
+:root {
+  --olive: #6B7A4F;
+  --cream: #F4F1EA;
+  --charcoal: #2B2B2B;
+  --sage: #A3B18A;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+/* Container for proper width */
+section,
+nav {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   Navigation
+========================= */
+
+header {
+  background: var(--sage);
+  color: var(--cream);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+}
+
+nav p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--sage);
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 3rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: var(--olive);
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background: var(--olive);
+  color: var(--cream);
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--sage);
+  transform: translateY(-2px);
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   About & Projects
+========================= */
+
+.two-column {
+  display: flex;
+  gap: 4rem;
+  padding: 4rem 2rem;
+}
+
+.two-column > div {
+  flex: 1;
+}
+
+.two-column h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Projects as cards */
+.projects {
+  list-style: none;
+  padding: 0;
+}
+
+.projects li {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.projects li:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  background: var(--sage);
+  color: var(--cream);
+  text-align: center;
+  padding: 2rem 2rem;
+  margin-top: 2rem;
+}
+
+footer h3 {
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
