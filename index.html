@@ -7,59 +7,74 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <nav>
-      <h1>Anje Nieuwenhuis
-     <h2>Junior Software Engineer</h2></h1>
-     
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="content">
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="nav-brand">
+          <h1>Anje Nieuwenhuis</h1>
+          <h2>Junior Software Engineer</h2>
+        </div>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h2>Crafting Modern Websites & Web Applications</h2>
-      <p>I build responsive, high-performance sites that make an impact.</p>
-      <a href="#work" class="btn">View My Work</a>
-    </div>
-    <div class="hero-image">
-      <img src="anje.jpg" alt="Anje smiling">
-    </div>
-  </section>
+        <button class="nav-toggle" aria-label="toggle navigation">
+          &#9776;
+        </button>
 
-  <!-- About & Projects -->
-  <section id="about" class="two-column">
-    <div>
-      <h3>About Me</h3>
-      <p>Passionate developer specializing in front-end and full-stack solutions.</p>
-    </div>
-    <div id="work">
-      <h3>Recent Projects</h3>
-      <ul class="projects">
-        <li>E-Commerce Platform</li>
-        <li>Tech Startup Landing Page</li>
-      </ul>
-    </div>
-  </section>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Contact -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h2>Building Scalable Software & Seamless User Experiences</h2>
+        <p>Software Engineering graduate specializing in full-stack web development, mobile applications, and Java-based systems. Passionate about turning ideas into functional, user-focused solutions.</p>
+        <a href="work.html" class="btn">View My Work</a>
+      </div>
+      <div class="hero-image">
+        <img src="anje.jpg" alt="Anje smiling">
+      </div>
+    </section>
+
+    <!-- About Grid Section -->
+    <section id="about" class="grid-layout">
+      <div class="card">
+        <h3>About Me</h3>
+        <p>I am Anje Nieuwenhuis, a BSc Software Engineering graduate from Eduvos. Over the past three years, I’ve built e-commerce platforms, mobile apps, and Java-based systems that combine technical robustness with user-friendly design. I thrive on problem-solving, collaboration, and creating software that makes an impact.</p>
+      </div>
+
+      <div class="card">
+        <h3>Qualifications</h3>
+        <p>Bachelor of Science in Information Technology (Software Engineering), Eduvos (2023–2025)</p>
+        <a href="about.html" class="more-about-btn">More About Me</a>
+      </div>
+
+      <div class="card">
+        <h3>Programming Languages</h3>
+        <p>Java, JavaScript, PHP, HTML, CSS, MySQL</p>
+      </div>
+
+      <div class="card">
+        <h3>Technical Tools</h3>
+        <p>VS Code, Git, GitHub, WampServer, Android Studio, Netbeans</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Contact / Footer -->
   <footer id="contact">
     <h3>Contact Me</h3>
     <p>Email: anjenieuwenhuis@gmail.com</p>
-    <p> LinkedIn: 
-        <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank">
-        Anje Nieuwenhuis Linkedln
-        </a>
+    <p>LinkedIn: 
+      <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank">
+        Anje Nieuwenhuis LinkedIn
+      </a>
     </p>
-
-
-    
   </footer>
 
   <script src="script.js"></script>
