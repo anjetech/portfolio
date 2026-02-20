@@ -1,30 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anje | Software Engineering</title>
+  <link rel="stylesheet" href="about.css">
 </head>
 <body>
-    <div>
-        <h3>About Me</h3>
-        <p>I am Anje Nieuwenhuis, a BSc Software Engineering graduate from Eduvos. Over the past three years, I’ve built e-commerce platforms, mobile apps, and Java-based systems that combine technical robustness with user-friendly design. I thrive on problem-solving, collaboration, and creating software that makes an impact.</p>
+  <div class="content">
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <button class="nav-toggle" aria-label="toggle navigation">
+            &#9776;
+          </button>
+          <div class="nav-brand">
+            <h1>Anje Nieuwenhuis</h1>
+            <h2>Junior Software Engineer</h2>
+          </div>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h2>About Me</h2>
+        <p>I am a BSc Information Technology (Software Engineering) graduate with a strong foundation in web development, 
+          object-oriented programming, and database design. I enjoy building structured, 
+          scalable systems that combine technical performance with clean user experience. </p>
+          <p> I am detail-oriented, analytical, and committed to writing maintainable, well-organized code. 
+            My goal is to grow within a professional development environment where I can contribute to meaningful, real-world systems.</p>
+      </div>
+      <div class="hero-image">
+        <img src="anje.jpg" alt="Anje smiling">
+      </div>
+    </section>
+
+    <!-- About Grid Section -->
+    <section id="about" class="grid-layout">
+      <div class="card">
+        <h3>Education</h3>
+        <p>Bachelor of Science in Information Technology(Software Engineering) <br> Eduvos (2023 - 2025)</p>
+        <p> Golden Key Honour Society Member <br> Class Representative (2025) </p>
+        <a href="CV and Letter.pdf" class="CV-btn">View CV and Letter of Complication</a>
       </div>
 
-      <div>
-        <h3>Qualifications</h3>
-        <p>Bachelor of Science in Information Technology (Software Engineering), Eduvos (2023–2025)</p>
-      </div>
+      <div class="card">
+        <h3>Skills</h3>
+        <p>Programming Languages: Java, JavaScript, PHP, HTML, CSS, MySQL</p>
+        <p>Technical Tools: VS Code, Git, GitHub, WampServer Databases, Android Studio, Netbeans</p>
 
-      <div>
-        <h3>Programming Languages</h3>
-        <p>Java, JavaScript, PHP,  HTML, CSS, MySQL</p>
+        <a href="https://github.com/anjetech" target="_blank" class="CV-btn">
+          View My GitHub
+        </a>
+        <a href="work.html" class="btn">View My Work</a>
       </div>
+    </section>
 
-      <div>
-        <h3>Technical Tools</h3>
-        <p>VS Code, Git, GitHub, WampServer Databases, Android Studio, Netbeans,</p>
-      </div>
+    <!-- Contact / Footer -->
+    <footer id="contact">
+      <h3>Contact Me</h3>
+      <p>Email: anjenieuwenhuis@gmail.com</p>
+      <p>LinkedIn: 
+        <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank">
+          Anje Nieuwenhuis LinkedIn
+        </a>
+      </p>
+    </footer>
 
+    <script src="script.js"></script>
+  </div>
 </body>
 </html>
