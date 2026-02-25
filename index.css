@@ -16,6 +16,7 @@ html, body {
   height: 100%;
 }
 
+/* ✅ BACKGROUND ADDED HERE */
 body {
   display: flex;
   flex-direction: column;
@@ -23,6 +24,24 @@ body {
   background-color: var(--cream);
   color: var(--charcoal);
   line-height: 1.6;
+
+  /* Background image */
+  background-image: url("background.png"); /* change path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ✅ Soft overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.60); /* adjust 0.50 - 0.70 if needed */
+  z-index: -1;
 }
 
 /* Make main content take remaining space */
@@ -271,12 +290,12 @@ footer a:hover {
   }
 
   .navbar {
-    flex-direction: column; /* stack brand + links vertically */
+    flex-direction: column;
     align-items: flex-start;
   }
 
   .nav-toggle {
-    display: block; /* show hamburger */
+    display: block;
   }
 
   .nav-links {
@@ -284,14 +303,14 @@ footer a:hover {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    text-align: left; /* align links under name/title */
+    text-align: left;
     background: var(--sage);
     padding: 0;
-    max-height: 0; /* collapsed by default */
+    max-height: 0;
   }
 
   .nav-links.active {
-    max-height: 500px; /* expands smoothly */
+    max-height: 500px;
     padding: 1rem 0;
   }
 

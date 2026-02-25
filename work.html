@@ -6,23 +6,20 @@
   <title>Anje | Software Engineering</title>
   <link rel="stylesheet" href="work.css">
 </head>
-<body>
-  
-  <h1>Work pages Not yet available</h1>
-
-  <!--   
+<body> 
   <div class="content">
-    
+    <!-- Header -->
     <header>
-      <nav>
-        <div class="nav-brand">
-          <h1>Anje Nieuwenhuis</h1>
-          <h2>Junior Software Engineer</h2>
+      <nav class="navbar">
+        <div class="nav-left">
+          <button class="nav-toggle" aria-label="toggle navigation">
+            &#9776;
+          </button>
+          <div class="nav-brand">
+            <h1>Anje Nieuwenhuis</h1>
+            <h2>Junior Software Engineer</h2>
+          </div>
         </div>
-
-        <button class="nav-toggle" aria-label="toggle navigation">
-          &#9776;
-        </button>
 
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -32,44 +29,137 @@
         </ul>
       </nav>
     </header>
--->
-    <!-- Hero Section 
-    <section id="home" class="hero">
-      <div class="hero-text">
-        <h2>Building Scalable Software & Seamless User Experiences</h2>
-        <p>Software Engineering graduate specializing in full-stack web development, mobile applications, and Java-based systems. Passionate about turning ideas into functional, user-focused solutions.</p>
-        <a href="work.html" class="btn">View My Work</a>
-      </div>
-      <div class="hero-image">
-        <img src="anje.jpg" alt="Anje smiling">
-      </div>
-    </section>
--->
-    <!-- About Grid Section 
-    <section id="about" class="grid-layout">
-      <div class="card">
-        <h3>About Me</h3>
-        <p>I am Anje Nieuwenhuis, a BSc Software Engineering graduate from Eduvos. Over the past three years, I’ve built e-commerce platforms, mobile apps, and Java-based systems that combine technical robustness with user-friendly design. I thrive on problem-solving, collaboration, and creating software that makes an impact.</p>
+
+    <section class="projects-section">
+
+      <!-- ✅ Updated header block -->
+      <div class="projects-header">
+        <span class="section-label">Portfolio</span>
+        <h2 class="projects-title">Selected Projects</h2>
+        
+        <p class="projects-subtitle">
+          Carefully designed web and mobile applications showcasing full-stack development, clean architecture, and scalable solutions.
+        </p>
       </div>
 
-      <div class="card">
-        <h3>Qualifications</h3>
-        <p>Bachelor of Science in Information Technology (Software Engineering), Eduvos (2023–2025)</p>
-        <a href="about.html" class="more-about-btn">More About Me</a>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="Portfolio/ZestyWear.png" alt="Zesty Wear Screenshot">
+          </div>
+          <div class="project-content">
+            <h3>Zesty Wear SA</h3>
+            <p class="project-sub">E-Commerce Website</p>
+            <p class="project-desc">
+              Full-stack e-commerce platform with product listings, shopping cart and checkout functionality.
+            </p>
+
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+            </div>
+
+            <div class="project-buttons">
+              <a href="#" class="btn-primary">Live Site</a>
+              <a href="#" class="btn-outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="Portfolio/wattway_logo.PNG" alt="WattWay Logo">
+          </div>
+          <div class="project-content">
+            <h3>WattWay</h3>
+            <p class="project-sub">EV Charging & Load Shedding App</p>
+            <p class="project-desc">
+              Android app providing EV charging locations, navigation, and load-shedding schedules.
+            </p>
+
+            <div class="tech-stack">
+              <span>Java</span>
+              <span>Android</span>
+              <span>API</span>
+            </div>
+
+            <div class="project-buttons">
+              <a href="#" class="btn-primary">Demo</a>
+              <a href="#" class="btn-outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="Portfolio/java.2.png" alt="Digital Insurance System Screenshot">
+          </div>
+          <div class="project-content">
+            <h3>Digital Insurance System</h3>
+            <p class="project-sub">Java Console Application</p>
+            <p class="project-desc">
+              Console-based system for managing insurance clients with object-oriented design.
+            </p>
+
+            <div class="tech-stack">
+              <span>Java</span>
+              <span>OOP</span>
+            </div>
+
+            <div class="project-buttons">
+              <a href="#" class="btn-primary">View Code</a>
+              <a href="#" class="btn-outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="Portfolio/F1-2.png" alt="F1 Reaction Time App Screenshot">
+          </div>
+          <div class="project-content">
+            <h3>F1 Reaction Time App</h3>
+            <p class="project-sub">Interactive Web Application</p>
+            <p class="project-desc">
+              Web app measuring user reaction speed using dynamic DOM manipulation.
+            </p>
+
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="project-buttons">
+              <a href="#" class="btn-primary">Live Demo</a>
+              <a href="#" class="btn-outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
--->
-  <!-- Contact / Footer 
-  <footer id="contact">
-    <h3>Contact Me</h3>
-    <p>Email: anjenieuwenhuis@gmail.com</p>
-    <p>LinkedIn: 
-      <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank">
-        Anje Nieuwenhuis LinkedIn
-      </a>
-    </p>
-  </footer>
--->
-  <script src="script.js"></script>
+
+    <!-- Contact / Footer -->
+    <footer id="contact">
+      <h3>Contact Me</h3>
+      <p>Email: anjenieuwenhuis@gmail.com</p>
+      <p>LinkedIn: 
+        <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank">
+          Anje Nieuwenhuis LinkedIn
+        </a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </div>
 </body>
 </html>
