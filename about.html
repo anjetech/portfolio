@@ -1,83 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anje | Software Engineering</title>
-  <link rel="stylesheet" href="about.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anje | About</title>
+  <link rel="stylesheet" href="about.css" />
 </head>
+
 <body>
-  <div class="content">
-    <!-- Header -->
-    <header>
-      <nav class="navbar">
-        <div class="nav-left">
-          <button class="nav-toggle" aria-label="toggle navigation">
-            &#9776;
-          </button>
-          <div class="nav-brand">
-            <h1>Anje Nieuwenhuis</h1>
-            <h2>Junior Software Engineer</h2>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar">
+      <div class="nav-left">
+        <button class="nav-toggle" aria-label="toggle navigation" aria-expanded="false">
+          &#9776;
+        </button>
+
+        <div class="nav-brand">
+          <h1>Anje Nieuwenhuis</h1>
+          <h2>Junior Software Engineer</h2>
+        </div>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <!-- ABOUT HERO -->
+    <section class="about-hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="grid"></span>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-text reveal">
+          <p class="pill">About • Education • Skills • Links</p>
+
+          <h2 class="headline">
+            A <span class="accent">Software Engineering</span> graduate who builds
+            <span class="accent-2">structured, scalable systems</span>.
+          </h2>
+
+          <p class="subhead">
+            I am a BSc Information Technology (Software Engineering) graduate with a strong foundation in web development,
+            object-oriented programming, and database design. I enjoy building structured, scalable systems that combine
+            technical performance with clean user experience.
+          </p>
+
+          <p class="subhead">
+            I am detail-oriented, analytical, and committed to writing maintainable, well-organized code.
+            My goal is to grow within a professional development environment where I can contribute to meaningful, real-world systems.
+          </p>
+
+          <div class="hero-actions">
+            <a href="work.html" class="btn primary">View My Work</a>
+            <a href="#profile" class="btn ghost">See Highlights</a>
           </div>
         </div>
 
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-text">
-        <h2>About Me</h2>
-        <p>I am a BSc Information Technology (Software Engineering) graduate with a strong foundation in web development, 
-          object-oriented programming, and database design. I enjoy building structured, 
-          scalable systems that combine technical performance with clean user experience. </p>
-          <p> I am detail-oriented, analytical, and committed to writing maintainable, well-organized code. 
-            My goal is to grow within a professional development environment where I can contribute to meaningful, real-world systems.</p>
-      </div>
-      <div class="hero-image">
-        <img src="anje.jpg" alt="Anje smiling">
+        <div class="hero-image reveal">
+          <div class="image-frame">
+            <img src="anje.jpg" alt="Anje smiling" />
+          </div>
+          <div class="image-caption">
+            <span class="dot"></span>
+            Building clean UI + reliable backend logic
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- About Grid Section -->
-    <section id="about" class="grid-layout">
-      <div class="card">
-        <h3>Education</h3>
-        <p>Bachelor of Science in Information Technology(Software Engineering) <br> Eduvos (2023 - 2025)</p>
-        <p> Golden Key Honour Society Member <br> Class Representative (2025) </p>
-        <a href="CV and Letter.pdf" class="CV-btn">View CV and Letter of Complication</a>
+    <!-- HIGHLIGHTS -->
+    <section class="section" id="profile">
+      <div class="section-title reveal">
+        <h3>Highlights</h3>
+        <p>Quick things recruiters care about — fast to scan.</p>
       </div>
 
-      <div class="card">
-        <h3>Skills</h3>
-        <p>Programming Languages: Java, JavaScript, PHP, HTML, CSS, MySQL</p>
-        <p>Technical Tools: VS Code, Git, GitHub, WampServer Databases, Android Studio, Netbeans</p>
+      <div class="highlight-grid">
+        <article class="mini-card reveal">
+          <h4>Strengths</h4>
+          <p>Problem-solving, clean structure, consistency, and attention to detail.</p>
+        </article>
 
-        <a href="https://github.com/anjetech" target="_blank" class="CV-btn">
-          View My GitHub
-        </a>
-        <a href="work.html" class="btn">View My Work</a>
+        <article class="mini-card reveal">
+          <h4>Focus</h4>
+          <p>Web development, Java systems, and building practical user-focused apps.</p>
+        </article>
+
+        <article class="mini-card reveal">
+          <h4>Style</h4>
+          <p>Readable UI, maintainable code, and a “finish the job properly” mindset.</p>
+        </article>
       </div>
     </section>
 
-    <!-- Contact / Footer -->
-    <footer id="contact">
-      <h3>Contact Me</h3>
-      <p>Email: anjenieuwenhuis@gmail.com</p>
-      <p>LinkedIn: 
-        <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank">
-          Anje Nieuwenhuis LinkedIn
-        </a>
-      </p>
-    </footer>
+    <!-- MAIN CARDS -->
+    <section class="section">
+      <div class="cards">
+        <article class="card reveal">
+          <h3>Education</h3>
+          <p>
+            Bachelor of Science in Information Technology (Software Engineering) <br />
+            Eduvos (2023 - 2025)
+          </p>
+          <p>
+            Golden Key Honour Society Member <br />
+            Class Representative (2025)
+          </p>
 
-    <script src="script.js"></script>
-  </div>
+          <div class="card-actions">
+            <a href="CV and Letter.pdf" class="btn small primary" target="_blank" rel="noreferrer">
+              View CV + Letter
+            </a>
+            <a href="#contact" class="btn small ghost">Contact</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <h3>Skills</h3>
+          <p><strong>Programming:</strong> Java, JavaScript, PHP, HTML, CSS, MySQL</p>
+          <p><strong>Tools:</strong> VS Code, Git, GitHub, WampServer, Android Studio, NetBeans</p>
+
+          <div class="tags">
+            <span>Java</span><span>Web</span><span>MySQL</span><span>Android</span><span>GitHub</span>
+          </div>
+
+          <div class="card-actions">
+            <a href="https://github.com/anjetech" target="_blank" class="btn small" rel="noreferrer">
+              View GitHub
+            </a>
+            <a href="work.html" class="btn small ghost">View My Work</a>
+          </div>
+        </article>
+
+        <article class="card reveal highlight">
+          <h3>What I’m Looking For</h3>
+          <p>
+            A junior role where I can grow with mentorship, write production-quality code,
+            and contribute to systems that matter.
+          </p>
+          <ul class="mini-list">
+            <li>✅ Supportive dev environment</li>
+            <li>✅ Real projects + learning</li>
+            <li>✅ Strong code practices</li>
+            <li>✅ Team collaboration</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-inner reveal">
+      <div>
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:anjenieuwenhuis@gmail.com">anjenieuwenhuis@gmail.com</a></p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank" rel="noreferrer">
+            Anje Nieuwenhuis
+          </a>
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <a class="btn primary" href="work.html">See Projects</a>
+        <a class="btn ghost" href="#top">Back to Top</a>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> Anje Nieuwenhuis • Built with HTML/CSS/JS
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

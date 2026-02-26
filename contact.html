@@ -1,52 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anje | Software Engineering</title>
-  <link rel="stylesheet" href="work.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anje | Contact</title>
+  <link rel="stylesheet" href="contact.css" />
 </head>
-<body> 
-  <div class="content">
-    <!-- Header -->
-    <header>
-      <nav class="navbar">
-        <div class="nav-left">
-          <button class="nav-toggle" aria-label="toggle navigation">
-            &#9776;
-          </button>
-          <div class="nav-brand">
-            <h1>Anje Nieuwenhuis</h1>
-            <h2>Junior Software Engineer</h2>
+
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar">
+      <div class="nav-left">
+        <button class="nav-toggle" aria-label="toggle navigation" aria-expanded="false">
+          &#9776;
+        </button>
+
+        <div class="nav-brand">
+          <h1>Anje Nieuwenhuis</h1>
+          <h2>Junior Software Engineer</h2>
+        </div>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="contact-hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="grid"></span>
+      </div>
+
+      <div class="wrap">
+        <div class="header reveal">
+          <span class="section-label">Contact</span>
+          <h2 class="title">Let’s build something great.</h2>
+          <p class="subtitle">
+            If you’d like to connect about junior opportunities, projects, or collaborations —
+            send a message or use the quick links below.
+          </p>
+        </div>
+
+        <div class="layout">
+          <!-- Left: Contact Info Cards -->
+          <div class="info">
+            <article class="mini-card reveal">
+              <h3>Email</h3>
+              <p class="muted">Best for recruiters and formal queries.</p>
+              <a class="link" href="mailto:anjenieuwenhuis@gmail.com">anjenieuwenhuis@gmail.com</a>
+            </article>
+
+            <article class="mini-card reveal">
+              <h3>LinkedIn</h3>
+              <p class="muted">Connect + send a message.</p>
+              <a class="link" href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank" rel="noreferrer">
+                Anje Nieuwenhuis
+              </a>
+            </article>
+
+            <article class="mini-card reveal">
+              <h3>GitHub</h3>
+              <p class="muted">Projects, code, and repositories.</p>
+              <a class="link" href="https://github.com/anjetech" target="_blank" rel="noreferrer">
+                github.com/anjetech
+              </a>
+            </article>
+
+            <div class="note reveal">
+              <h4>Quick note</h4>
+              <p>
+                I’m open to junior software engineering opportunities and projects that involve
+                web development, Java, databases, or Android.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form (front-end only) -->
+          <div class="form-card reveal">
+            <h3>Send a message</h3>
+            <p class="muted">
+              This form is front-end only. If you want it to actually send emails,
+              I can help you connect it to Formspree or EmailJS.
+            </p>
+
+            <form class="contact-form" onsubmit="return false;">
+              <label>
+                Full Name
+                <input type="text" placeholder="Your name" />
+              </label>
+
+              <label>
+                Email
+                <input type="email" placeholder="you@example.com" />
+              </label>
+
+              <label>
+                Subject
+                <input type="text" placeholder="e.g. Junior role / Collaboration" />
+              </label>
+
+              <label>
+                Message
+                <textarea rows="6" placeholder="Write your message here..."></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button class="btn primary" type="button" id="fakeSend">Send Message</button>
+                <a class="btn ghost" href="mailto:anjenieuwenhuis@gmail.com?subject=Portfolio%20Enquiry">Email Instead</a>
+              </div>
+
+              <p class="tiny" id="formHint" aria-live="polite"></p>
+            </form>
           </div>
         </div>
 
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="work.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+        <div class="bottom-actions reveal">
+          <a class="btn ghost" href="work.html">See My Work</a>
+          <a class="btn primary" href="about.html">About Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Hero Section -->
-    <p>Cards needs to go here.</p>
-    <br>
-    <p>Cards needs to go here.</p>
+  <footer class="footer">
+    <div class="footer-inner reveal">
+      <div>
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:anjenieuwenhuis@gmail.com">anjenieuwenhuis@gmail.com</a></p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank" rel="noreferrer">
+            Anje Nieuwenhuis
+          </a>
+        </p>
+      </div>
 
-    
-  <!-- Contact / Footer -->
-  <footer id="contact">
-    <h3>Contact Me</h3>
-    <p>Email: anjenieuwenhuis@gmail.com</p>
-    <p>LinkedIn: 
-      <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank">
-        Anje Nieuwenhuis LinkedIn
-      </a>
+      <div class="footer-right">
+        <a class="btn primary" href="index.html">Home</a>
+        <a class="btn ghost" href="#top">Back to Top</a>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> Anje Nieuwenhuis • Built with HTML/CSS/JS
     </p>
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- small page-specific JS -->
+  <script>
+    const fakeSend = document.getElementById("fakeSend");
+    const hint = document.getElementById("formHint");
+
+    fakeSend.addEventListener("click", () => {
+      hint.textContent = "This is a demo form. Use the Email Instead button or LinkedIn to contact me.";
+    });
+  </script>
 </body>
 </html>
