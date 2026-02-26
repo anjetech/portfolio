@@ -9,26 +9,15 @@ const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 navToggle?.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  const expanded = navLinks.classList.contains("active");
-  navToggle.setAttribute("aria-expanded", expanded ? "true" : "false");
-
-  // dropdown animation height
-  if (expanded) {
-    navLinks.style.maxHeight = navLinks.scrollHeight + "px";
-  } else {
-    navLinks.style.maxHeight = null;
-  }
+  const isOpen = navLinks.classList.toggle("active");
+  navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
 });
 
 // Close menu when clicking a link (mobile)
 document.querySelectorAll(".nav-links a").forEach(a => {
   a.addEventListener("click", () => {
-    if (navLinks.classList.contains("active")) {
-      navLinks.classList.remove("active");
-      navLinks.style.maxHeight = null;
-      navToggle.setAttribute("aria-expanded", "false");
-    }
+    navLinks.classList.remove("active");
+    navToggle?.setAttribute("aria-expanded", "false");
   });
 });
 

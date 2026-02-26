@@ -17,12 +17,18 @@
 
 *{ box-sizing:border-box; margin:0; padding:0; }
 html{ scroll-behavior:smooth; }
+
+/* ✅ FIX: prevent sideways swipe on mobile */
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body{
   font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 /* Cursor glow */
@@ -59,21 +65,34 @@ body{
   align-items:center;
   justify-content: space-between;
   gap: 14px;
+  position: relative;
 }
 
 .nav-left{
   display:flex;
   align-items:center;
   gap: 14px;
+  min-width: 0;
 }
+
+.nav-brand{
+  min-width: 0;
+}
+
 .nav-brand h1{
   font-size: 18px;
   letter-spacing: .2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .nav-brand h2{
   font-size: 13px;
   font-weight: 600;
   color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav-toggle{
@@ -110,12 +129,25 @@ body{
 
 /* Layout */
 .content{ position: relative; z-index: 1; }
+
 .hero{
   position: relative;
   min-height: calc(100vh - 70px);
   display:flex;
   align-items:center;
   padding: 64px 18px 38px;
+
+  /* ✅ FIX: clip blobs/grid so they don’t create overflow */
+  overflow: hidden;
+}
+
+/* ✅ FIX: hero-bg must be a positioned layer */
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-inner{
@@ -125,6 +157,10 @@ body{
   grid-template-columns: 1.15fr .85fr;
   gap: 32px;
   align-items: center;
+
+  /* ✅ ensure content sits above hero-bg */
+  position: relative;
+  z-index: 1;
 }
 
 .hero-bg .blob{
@@ -397,10 +433,6 @@ body{
 .footer a{ color: var(--text); font-weight: 800; }
 .footer a:hover{ text-decoration: underline; }
 
-copyright{
-  text-align:center;
-}
-
 .copyright{
   margin-top: 18px;
   text-align:center;
@@ -420,23 +452,31 @@ copyright{
   transform: translateY(0);
 }
 
-/* Responsive */
+/* Responsive layout */
 @media (max-width: 980px){
   .hero-inner{ grid-template-columns: 1fr; }
   .cards{ grid-template-columns: 1fr; }
 }
 
-@media (max-width: 760px){
-  .nav-toggle{ display:inline-flex; }
+/* MOBILE NAV ONLY (iPhone) */
+@media (max-width: 767px){
+  .nav-toggle{ 
+    display:inline-flex; 
+    align-items:center; 
+    justify-content:center; 
+  }
+
   .nav-links{
     position: absolute;
+    left: 18px;
     right: 18px;
-    top: 68px;
-    width: min(320px, calc(100vw - 36px));
+    top: calc(100% + 10px);
+
     flex-direction: column;
     align-items: stretch;
     gap: 8px;
     padding: 10px;
+
     border: 1px solid var(--border);
     border-radius: 16px;
     background: rgba(244,241,234,.92);
@@ -445,8 +485,18 @@ copyright{
 
     max-height: 0;
     overflow: hidden;
-    transition: max-height .25s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: max-height .25s ease, opacity .2s ease, transform .2s ease;
   }
-  .nav-links.active{ max-height: 320px; }
-  .nav-links a{ width: 100%; }
+
+  .nav-links.active{ 
+    max-height: 320px; 
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links a{ width: 100%; display:block; }
 }
