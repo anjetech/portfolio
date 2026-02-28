@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zesty Wear SA | Preview</title>
+
+  <!-- Your shared site styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Preview-only styles -->
+  <link rel="stylesheet" href="preview.css" />
+</head>
+
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar">
+      <div class="nav-left">
+        <button class="nav-toggle" aria-label="toggle navigation" aria-expanded="false">
+          &#9776;
+        </button>
+
+        <div class="nav-brand">
+          <h1>Anje Nieuwenhuis</h1>
+          <h2>Junior Software Engineer</h2>
+        </div>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html" class="active">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="preview-page">
+      <!-- background like your other pages -->
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="grid"></span>
+      </div>
+
+      <div class="preview-wrap">
+        <!-- breadcrumb / back -->
+        <div class="preview-top reveal">
+          <a class="btn ghost" href="work.html">← Back to Work</a>
+        </div>
+
+        <!-- header -->
+        <div class="preview-hero reveal">
+          <div class="preview-hero-left">
+            <span class="section-label">Project Preview</span>
+            <h2 class="preview-title">Zesty Wear SA</h2>
+            <p class="preview-subtitle">E-Commerce Website</p>
+
+            <p class="preview-desc">
+              Full-stack e-commerce platform with product listings, shopping cart, checkout,
+              session handling, and database-driven CRUD functionality.
+            </p>
+
+            <div class="tech-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+            </div>
+
+            <div class="preview-actions">
+              <a class="btn primary" href="#screens">View Screenshots</a>
+              <a class="btn ghost" href="https://github.com/anjetech/Zesty-Wear-SA" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+
+          <!-- cover image (the logo card you generated) -->
+          <div class="preview-cover image-frame">
+            <!-- rename this to your final file name -->
+            <img src="Photos/ZestyWear.png" alt="Zesty Wear SA cover image">
+          </div>
+        </div>
+
+        <!-- quick info cards -->
+        <div class="preview-info cards reveal">
+          <div class="card">
+            <h3>What it does</h3>
+            <ul class="mini-list">
+              <li>Browse products and view details</li>
+              <li>Add to cart and update quantities</li>
+              <li>Checkout flow with session handling</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Key features</h3>
+            <ul class="mini-list">
+              <li>Product listings + filtering (if applicable)</li>
+              <li>Cart + totals</li>
+              <li>CRUD + database relationships</li>
+            </ul>
+          </div>
+
+          <div class="card highlight">
+            <h3>What I learned</h3>
+            <ul class="mini-list">
+              <li>PHP + MySQL integration</li>
+              <li>Building CRUD with clean structure</li>
+              <li>Handling state with sessions</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- screenshots -->
+        <div class="preview-section reveal" id="screens">
+          <h3 class="preview-h3">Screenshots</h3>
+          <p class="preview-muted">Add 4–8 screenshots. Keep them the same size for a clean look.</p>
+
+          <div class="gallery">
+            <!-- Replace these with your real screenshots -->
+            <figure class="shot image-frame">
+              <img src="Photos/zesty_01.png" alt="Zesty Wear - Home page">
+            </figure>
+
+            <figure class="shot image-frame">
+              <img src="Photos/zesty_02.png" alt="Zesty Wear - Product listing">
+            </figure>
+
+            <figure class="shot image-frame">
+              <img src="Photos/zesty_03.png" alt="Zesty Wear - Cart">
+            </figure>
+
+            <figure class="shot image-frame">
+              <img src="Photos/zesty_04.png" alt="Zesty Wear - Checkout">
+            </figure>
+          </div>
+
+          <div class="preview-tip">
+            <span class="dot"></span>
+            <p class="preview-muted">
+              Tip: If you don’t have 4 screenshots yet, start with 2 (Home + Cart) and add more later.
+            </p>
+          </div>
+        </div>
+
+        <!-- project notes (optional but professional) -->
+        <div class="preview-section reveal">
+          <h3 class="preview-h3">Build Notes</h3>
+
+          <div class="notes-grid">
+            <div class="note">
+              <h4>Architecture</h4>
+              <p class="preview-muted">
+                Structured pages and server-side logic to support product retrieval, cart actions,
+                and checkout flow.
+              </p>
+            </div>
+
+            <div class="note">
+              <h4>Data</h4>
+              <p class="preview-muted">
+                MySQL tables for products/users/orders (based on your implementation),
+                connected through relationships and CRUD operations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-bottom reveal">
+          <a class="btn ghost" href="work.html">← Back to Work</a>
+          <a class="btn primary" href="#top">Back to Top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-inner reveal">
+      <div>
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:anjenieuwenhuis@gmail.com">anjenieuwenhuis@gmail.com</a></p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank" rel="noreferrer">
+            Anje Nieuwenhuis
+          </a>
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <a class="btn primary" href="index.html">Home</a>
+        <a class="btn ghost" href="#top">Back to Top</a>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> Anje Nieuwenhuis • Built with HTML/CSS/JS
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
