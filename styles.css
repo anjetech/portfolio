@@ -807,3 +807,40 @@ input:focus, textarea:focus{
 
   .project-image{ height: 200px; }
 }
+/* spacing after description */
+.project-card .project-desc{
+  margin-bottom: 16px;
+}
+
+.project-card .project-note{
+  margin: 0 0 16px 0;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(43,43,43,.05);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  font-size: 0.80rem;        /* smaller text */
+  font-weight: 500;         /* lighter than before */
+  color: rgba(43,43,43,.65); /* softer tone */
+}
+
+/* dot */
+.project-card .status-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;                  /* aligns dot with first text line */
+  flex: 0 0 10px;
+}
+
+.project-card .status-dot.red{
+  background: #d9534f;
+}
+
+/* note text */
+.project-card .note-text{
+  line-height: 1.35;
+}
