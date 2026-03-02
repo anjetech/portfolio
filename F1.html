@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zesty Wear SA | Preview</title>
+  <title>F1 Reaction Time App | Preview</title>
 
   <!-- Your shared site styles -->
   <link rel="stylesheet" href="styles.css" />
@@ -55,28 +55,28 @@
         <div class="preview-hero reveal">
           <div class="preview-hero-left">
             <span class="section-label">Project Preview</span>
-            <h2 class="preview-title">Zesty Wear SA</h2>
-            <p class="preview-subtitle">E-Commerce Website</p>
+            <h2 class="preview-title">F1 Reaction Time App</h2>
+            <p class="preview-subtitle">Interactive Web App</p>
 
             <p class="preview-desc">
-              Full-stack e-commerce platform with product listings, shopping cart, checkout,
-              session handling, and database-driven CRUD functionality.
+              A browser-based reaction time game inspired by F1 lights-out starts.
+              Users click as soon as the screen changes, and the app measures reaction speed in milliseconds.
+              Built with clean UI, DOM updates, and precise timing logic.
             </p>
 
             <div class="tech-stack">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>DOM</span>
             </div>
 
             <div class="preview-actions">
               <a class="btn primary" href="#screens">View Screenshots</a>
-              <a class="btn ghost" href="https://github.com/anjetech/Zesty-Wear-SA" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn ghost" href="https://github.com/anjetech/F1-React-Time-Website" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
 
-          <!-- cover image (the logo card you generated) -->
+          <!-- cover image -->
           <div class="preview-cover image-frame">
-            <!-- rename this to your final file name -->
-            <img src="Photos/F1.png" alt="Zesty Wear SA cover image">
+            <img src="Photos/F1.png" alt="F1 Reaction Time App cover image">
           </div>
         </div>
 
@@ -85,27 +85,27 @@
           <div class="card">
             <h3>What it does</h3>
             <ul class="mini-list">
-              <li>Browse products and view details</li>
-              <li>Add to cart and update quantities</li>
-              <li>Checkout flow with session handling</li>
+              <li>Starts a reaction test with a random delay</li>
+              <li>Measures click speed in milliseconds</li>
+              <li>Shows results instantly (and resets to play again)</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>Key features</h3>
             <ul class="mini-list">
-              <li>Product listings + filtering (if applicable)</li>
-              <li>Cart + totals</li>
-              <li>CRUD + database relationships</li>
+              <li>Randomised start timing to prevent guessing</li>
+              <li>Clear UI states (waiting, ready, clicked)</li>
+              <li>Basic error handling (too early clicks)</li>
             </ul>
           </div>
 
           <div class="card highlight">
             <h3>What I learned</h3>
             <ul class="mini-list">
-              <li>PHP + MySQL integration</li>
-              <li>Building CRUD with clean structure</li>
-              <li>Handling state with sessions</li>
+              <li>Working with timers and accurate time measurement</li>
+              <li>DOM manipulation for live UI updates</li>
+              <li>Keeping logic clean with simple state handling</li>
             </ul>
           </div>
         </div>
@@ -113,53 +113,53 @@
         <!-- screenshots -->
         <div class="preview-section reveal" id="screens">
           <h3 class="preview-h3">Screenshots</h3>
-          <p class="preview-muted">Add 4–8 screenshots. Keep them the same size for a clean look.</p>
+          <p class="preview-muted">Add 3–6 screenshots (Start screen, Waiting state, Result screen).</p>
 
           <div class="gallery">
             <!-- Replace these with your real screenshots -->
             <figure class="shot image-frame">
-              <img src="Photos/zesty_01.png" alt="Zesty Wear - Home page">
+              <img src="Photos/f1_01.png" alt="F1 Reaction App - Start screen">
             </figure>
 
             <figure class="shot image-frame">
-              <img src="Photos/zesty_02.png" alt="Zesty Wear - Product listing">
+              <img src="Photos/f1_02.png" alt="F1 Reaction App - Waiting / lights out state">
             </figure>
 
             <figure class="shot image-frame">
-              <img src="Photos/zesty_03.png" alt="Zesty Wear - Cart">
+              <img src="Photos/f1_03.png" alt="F1 Reaction App - Result screen">
             </figure>
 
             <figure class="shot image-frame">
-              <img src="Photos/zesty_04.png" alt="Zesty Wear - Checkout">
+              <img src="Photos/f1_04.png" alt="F1 Reaction App - Replay / reset">
             </figure>
           </div>
 
           <div class="preview-tip">
             <span class="dot"></span>
             <p class="preview-muted">
-              Tip: If you don’t have 4 screenshots yet, start with 2 (Home + Cart) and add more later.
+              Tip: If you don’t have 4 screenshots yet, start with 2 (Start + Result) and add more later.
             </p>
           </div>
         </div>
 
-        <!-- project notes (optional but professional) -->
+        <!-- build notes -->
         <div class="preview-section reveal">
           <h3 class="preview-h3">Build Notes</h3>
 
           <div class="notes-grid">
             <div class="note">
-              <h4>Architecture</h4>
+              <h4>Logic</h4>
               <p class="preview-muted">
-                Structured pages and server-side logic to support product retrieval, cart actions,
-                and checkout flow.
+                Uses a random delay before switching to the “GO” state, then records the time difference between
+                state change and user click to calculate reaction time.
               </p>
             </div>
 
             <div class="note">
-              <h4>Data</h4>
+              <h4>UI</h4>
               <p class="preview-muted">
-                MySQL tables for products/users/orders (based on your implementation),
-                connected through relationships and CRUD operations.
+                UI updates are handled through DOM manipulation to reflect each state clearly
+                (ready → waiting → go → result) for a smooth user experience.
               </p>
             </div>
           </div>

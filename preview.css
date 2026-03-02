@@ -88,11 +88,29 @@
   gap: 14px;
 }
 
+/* ✅ FIX: screenshots should NOT be rounded or cropped */
+.preview-page .gallery .image-frame,
+.preview-page .gallery .shot{
+  border-radius: 0 !important;
+  overflow: visible !important; /* prevents clipping */
+}
+
+/* Keep the grid consistent but show the FULL screenshot */
 .shot img{
   width: 100%;
   height: 260px;
-  object-fit: cover;
+  object-fit: contain;   /* ✅ shows full image (no cropping) */
   display:block;
+  border-radius: 0 !important;
+}
+
+/* ✅ FIX: remove hover effects on screenshots */
+.preview-page .gallery .image-frame:hover,
+.preview-page .gallery .shot:hover,
+.preview-page .gallery .image-frame:hover img{
+  transform: none !important;
+  box-shadow: none !important;
+  filter: none !important;
 }
 
 /* small helper row */
@@ -125,4 +143,33 @@
   .gallery{ grid-template-columns: 1fr; }
   .notes-grid{ grid-template-columns: 1fr; }
   .preview-cover img{ height: 260px; }
+
+  /* optional: make screenshots taller on small screens */
+  .shot img{ height: 240px; }
+}
+
+/* ======================================================
+   HARD FIX: Disable hover/scale on GALLERY screenshots only
+   (Overrides .image-frame hover in styles.css)
+====================================================== */
+
+/* stop any transitions/animations */
+.preview-page .gallery .image-frame,
+.preview-page .gallery .image-frame img{
+  transition: none !important;
+}
+
+/* remove the default scale from .image-frame img */
+.preview-page .gallery .image-frame img{
+  transform: none !important;
+}
+
+/* prevent scaling on hover */
+.preview-page .gallery .image-frame:hover img{
+  transform: none !important;
+}
+
+/* also remove any lift/shadow hover if you ever add it later */
+.preview-page .gallery .image-frame:hover{
+  box-shadow: none !important;
 }
