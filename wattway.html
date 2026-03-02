@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zesty Wear SA | Preview</title>
+  <title>WattWay | Preview</title>
 
   <!-- Your shared site styles -->
   <link rel="stylesheet" href="styles.css" />
@@ -55,28 +55,32 @@
         <div class="preview-hero reveal">
           <div class="preview-hero-left">
             <span class="section-label">Project Preview</span>
-            <h2 class="preview-title">Wattway</h2>
-            <p class="preview-subtitle">Solar Panel E-Commerce Website</p>
+            <h2 class="preview-title">WattWay</h2>
+            <p class="preview-subtitle">EV Charging & Load-shedding Mobile App</p>
 
             <p class="preview-desc">
-              Full-stack e-commerce platform for solar panels with product listings, shopping cart, checkout,
-              session handling, and database-driven CRUD functionality.
+              A mobile app that helps EV users find charging stations on a map and view load-shedding schedules.
+              It includes secure login/registration, role-based access, profile management, and admin controls,
+              with strong error handling and smooth screen navigation.
             </p>
 
             <div class="tech-stack">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+              <span>Android</span><span>Firebase Auth</span><span>Firestore</span><span>Google Maps</span>
+              <span>EskomSePush API</span><span>MVVM</span>
             </div>
 
             <div class="preview-actions">
               <a class="btn primary" href="#screens">View Screenshots</a>
-              <a class="btn ghost" href="https://github.com/anjetech/Wattway" target="_blank" rel="noreferrer">GitHub</a>
+
+              <!-- Note: your doc says the repo is private; link still included for convenience -->
+              <a class="btn ghost" href="https://github.com/anjetech/WattWay-App" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
 
-          <!-- cover image (the logo card you generated) -->
+          <!-- cover image -->
           <div class="preview-cover image-frame">
-            <!-- rename this to your final file name -->
-            <img src="Photos/wattway_logo.PNG" alt="Wattway cover image">
+            <!-- Update this filename to match your real image -->
+            <img src="Photos/wattway_logo.PNG" alt="WattWay cover image">
           </div>
         </div>
 
@@ -85,27 +89,27 @@
           <div class="card">
             <h3>What it does</h3>
             <ul class="mini-list">
-              <li>Browse products and view details</li>
-              <li>Add to cart and update quantities</li>
-              <li>Checkout flow with session handling</li>
+              <li>Shows EV charging stations on a map</li>
+              <li>Displays load-shedding schedules (API-driven)</li>
+              <li>Profile management + admin controls</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>Key features</h3>
             <ul class="mini-list">
-              <li>Product listings + filtering (if applicable)</li>
-              <li>Cart + totals</li>
-              <li>CRUD + database relationships</li>
+              <li>Secure login & registration (Firebase Authentication)</li>
+              <li>Role-based access using Firestore rules</li>
+              <li>Error handling + loading states for API responses</li>
             </ul>
           </div>
 
           <div class="card highlight">
             <h3>What I learned</h3>
             <ul class="mini-list">
-              <li>PHP + MySQL integration</li>
-              <li>Building CRUD with clean structure</li>
-              <li>Handling state with sessions</li>
+              <li>MVVM structure for cleaner, maintainable code</li>
+              <li>NoSQL design + real-time syncing with Firebase</li>
+              <li>UI consistency and testing to reduce bugs</li>
             </ul>
           </div>
         </div>
@@ -118,31 +122,31 @@
           <div class="gallery">
             <!-- Replace these with your real screenshots -->
             <figure class="shot image-frame">
-              <img src="Photos/zesty_01.png" alt="Zesty Wear - Home page">
+              <img src="Photos/wattway_01.png" alt="WattWay - Login or Home screen">
             </figure>
 
             <figure class="shot image-frame">
-              <img src="Photos/zesty_02.png" alt="Zesty Wear - Product listing">
+              <img src="Photos/wattway_02.png" alt="WattWay - Map view and station markers">
             </figure>
 
             <figure class="shot image-frame">
-              <img src="Photos/zesty_03.png" alt="Zesty Wear - Cart">
+              <img src="Photos/wattway_03.png" alt="WattWay - Load-shedding schedules screen">
             </figure>
 
             <figure class="shot image-frame">
-              <img src="Photos/zesty_04.png" alt="Zesty Wear - Checkout">
+              <img src="Photos/wattway_04.png" alt="WattWay - Admin controls screen">
             </figure>
           </div>
 
           <div class="preview-tip">
             <span class="dot"></span>
             <p class="preview-muted">
-              Tip: If you don’t have 4 screenshots yet, start with 2 (Home + Cart) and add more later.
+              Tip: If you don’t have 4 screenshots yet, start with 2 (Map + Load-shedding) and add more later.
             </p>
           </div>
         </div>
 
-        <!-- project notes (optional but professional) -->
+        <!-- project notes -->
         <div class="preview-section reveal">
           <h3 class="preview-h3">Build Notes</h3>
 
@@ -150,16 +154,16 @@
             <div class="note">
               <h4>Architecture</h4>
               <p class="preview-muted">
-                Structured pages and server-side logic to support product retrieval, cart actions,
-                and checkout flow.
+                Designed to integrate multiple services smoothly (authentication, database, maps, and external APIs),
+                while handling asynchronous data flow, navigation stability, and clean maintainable structure using MVVM.
               </p>
             </div>
 
             <div class="note">
               <h4>Data</h4>
               <p class="preview-muted">
-                MySQL tables for products/users/orders (based on your implementation),
-                connected through relationships and CRUD operations.
+                Uses Firestore (NoSQL) with role-based access control and real-time syncing.
+                Improved reliability by adding error handling/loading states and tightening access rules.
               </p>
             </div>
           </div>

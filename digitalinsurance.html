@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zesty Wear SA | Preview</title>
+  <title>Digital Insurance Management System | Preview</title>
 
   <!-- Your shared site styles -->
   <link rel="stylesheet" href="styles.css" />
@@ -55,28 +55,30 @@
         <div class="preview-hero reveal">
           <div class="preview-hero-left">
             <span class="section-label">Project Preview</span>
-            <h2 class="preview-title">Digital Insurance System</h2>
-            <p class="preview-subtitle">Java-based Insurance Management System</p>
+            <h2 class="preview-title">Digital Insurance Management System</h2>
+            <p class="preview-subtitle">JavaFX Desktop App + MySQL (JDBC)</p>
 
             <p class="preview-desc">
-              Full-stack Java application for managing insurance policies, claims, and customer data.
-              Features include user authentication, policy management, claim processing, and database integration.
+              A JavaFX desktop application that captures customer and policy details, calculates insurance premiums
+              based on policy type, stores records in a database, and displays saved policies in a TableView.
+              Built with clean UI structure, event-driven logic, and database integration.
             </p>
 
             <div class="tech-stack">
-              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+              <span>Java</span><span>JavaFX</span><span>JDBC</span><span>SQL / MySQL</span><span>TableView</span>
             </div>
 
             <div class="preview-actions">
               <a class="btn primary" href="#screens">View Screenshots</a>
-              <a class="btn ghost" href="https://github.com/anjetech/Zesty-Wear-SA" target="_blank" rel="noreferrer">GitHub</a>
+              <!-- Replace link with your real repo if you have one -->
+              <a class="btn ghost" href="#" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </div>
 
-          <!-- cover image (the logo card you generated) -->
+          <!-- cover image -->
           <div class="preview-cover image-frame">
-            <!-- rename this to your final file name -->
-            <img src="Photos/DigitalSystemJava.png" alt="Digital Insurance cover image">
+            <!-- Update this to your actual image file -->
+            <img src="Photos/DigitalSystemJava.png" alt="Digital Insurance Management System cover image">
           </div>
         </div>
 
@@ -85,27 +87,27 @@
           <div class="card">
             <h3>What it does</h3>
             <ul class="mini-list">
-              <li>Browse products and view details</li>
-              <li>Add to cart and update quantities</li>
-              <li>Checkout flow with session handling</li>
+              <li>Captures customer and policy info in a JavaFX form</li>
+              <li>Calculates premium automatically from coverage + policy type</li>
+              <li>Saves customers and policies into a SQL database</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>Key features</h3>
             <ul class="mini-list">
-              <li>Product listings + filtering (if applicable)</li>
-              <li>Cart + totals</li>
-              <li>CRUD + database relationships</li>
+              <li>Policy type selection (Life / Health / Auto)</li>
+              <li>Premium % logic (5% / 8% / 10%)</li>
+              <li>View Policies button loads DB data into TableView</li>
             </ul>
           </div>
 
           <div class="card highlight">
             <h3>What I learned</h3>
             <ul class="mini-list">
-              <li>PHP + MySQL integration</li>
-              <li>Building CRUD with clean structure</li>
-              <li>Handling state with sessions</li>
+              <li>Building JavaFX forms and wiring events cleanly</li>
+              <li>Connecting Java to SQL using JDBC (PreparedStatements)</li>
+              <li>Displaying data with TableView + ObservableList</li>
             </ul>
           </div>
         </div>
@@ -113,36 +115,36 @@
         <!-- screenshots -->
         <div class="preview-section reveal" id="screens">
           <h3 class="preview-h3">Screenshots</h3>
-          <p class="preview-muted">Add 4–8 screenshots. Keep them the same size for a clean look.</p>
+          <p class="preview-muted">Add 3–6 screenshots (Form, Premium Calculation, TableView, Database).</p>
 
           <div class="gallery">
             <!-- Replace these with your real screenshots -->
             <figure class="shot image-frame">
-              <img src="Photos/zesty_01.png" alt="Zesty Wear - Home page">
+              <img src="Photos/insurance_01.png" alt="Insurance app - Data capture form">
             </figure>
 
             <figure class="shot image-frame">
-              <img src="Photos/zesty_02.png" alt="Zesty Wear - Product listing">
+              <img src="Photos/insurance_02.png" alt="Insurance app - Premium calculation">
             </figure>
 
             <figure class="shot image-frame">
-              <img src="Photos/zesty_03.png" alt="Zesty Wear - Cart">
+              <img src="Photos/insurance_03.png" alt="Insurance app - View policies TableView">
             </figure>
 
             <figure class="shot image-frame">
-              <img src="Photos/zesty_04.png" alt="Zesty Wear - Checkout">
+              <img src="Photos/insurance_04.png" alt="Insurance app - Database records">
             </figure>
           </div>
 
           <div class="preview-tip">
             <span class="dot"></span>
             <p class="preview-muted">
-              Tip: If you don’t have 4 screenshots yet, start with 2 (Home + Cart) and add more later.
+              Tip: If you don’t have database screenshots, use NetBeans output + the TableView screen first.
             </p>
           </div>
         </div>
 
-        <!-- project notes (optional but professional) -->
+        <!-- build notes -->
         <div class="preview-section reveal">
           <h3 class="preview-h3">Build Notes</h3>
 
@@ -150,16 +152,16 @@
             <div class="note">
               <h4>Architecture</h4>
               <p class="preview-muted">
-                Structured pages and server-side logic to support product retrieval, cart actions,
-                and checkout flow.
+                JavaFX UI built with GridPane + form inputs, wired with button handlers.
+                Uses a Policy model (SimpleStringProperty) to bind data into a TableView.
               </p>
             </div>
 
             <div class="note">
               <h4>Data</h4>
               <p class="preview-muted">
-                MySQL tables for products/users/orders (based on your implementation),
-                connected through relationships and CRUD operations.
+                Uses JDBC with PreparedStatements to insert customers and policies into separate tables.
+                The View Policies action joins the tables and loads results into an ObservableList for display.
               </p>
             </div>
           </div>
