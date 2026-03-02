@@ -844,3 +844,14 @@ input:focus, textarea:focus{
 .project-card .note-text{
   line-height: 1.35;
 }
+
+/* =========================================
+   iPhone fix: don't hide content with reveal
+   (touch devices can be weird with reveal JS)
+========================================= */
+@media (hover: none) and (pointer: coarse){
+  .reveal{
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
