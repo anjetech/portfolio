@@ -173,3 +173,36 @@
 .preview-page .gallery .image-frame:hover{
   box-shadow: none !important;
 }
+
+/* ======================================================
+   WATTWAY ONLY: Vertical screenshots
+   (Other preview pages stay horizontal)
+====================================================== */
+
+.preview-wattway .gallery{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  justify-items: center;
+}
+
+.preview-wattway .shot{
+  width: 100%;
+  max-width: 320px;
+}
+
+.preview-wattway .shot img{
+  width: 100%;
+  height: auto;         /* remove fixed height */
+  aspect-ratio: 9 / 16; /* phone portrait */
+  object-fit: contain;  /* show full screenshot */
+  display: block;
+}
+
+/* optional: you had this in the shared rules, keep it WattWay-only too */
+.preview-wattway .gallery .image-frame,
+.preview-wattway .gallery .shot{
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
