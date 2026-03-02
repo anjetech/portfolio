@@ -206,3 +206,40 @@
   border-radius: 0 !important;
   overflow: visible !important;
 }
+
+/* ======================================================
+   DIGITAL INSURANCE ONLY: Bigger screenshots (no other pages affected)
+====================================================== */
+
+.preview-digital-insurance .gallery{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+/* Bigger, clearer previews */
+.preview-digital-insurance .shot img{
+  width: 100%;
+  height: 420px;           /* ✅ bigger */
+  object-fit: contain;     /* ✅ no cropping */
+  display: block;
+  background: rgba(244,241,234,.55); /* optional: helps white screenshots stand out */
+}
+
+/* Tablet + mobile: 1 per row, still tall enough to read */
+@media (max-width: 980px){
+  .preview-digital-insurance .gallery{
+    grid-template-columns: 1fr;
+  }
+
+  .preview-digital-insurance .shot img{
+    height: 380px;
+  }
+}
+
+@media (max-width: 560px){
+  .preview-digital-insurance .shot img{
+    height: 320px;
+  }
+}
