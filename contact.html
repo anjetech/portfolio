@@ -34,7 +34,6 @@
 
   <main class="content">
     <section class="contact-hero">
-      <!-- ✅ CHANGED: add page-bg -->
       <div class="page-bg hero-bg" aria-hidden="true">
         <span class="blob blob-1"></span>
         <span class="blob blob-2"></span>
@@ -53,16 +52,35 @@
 
         <div class="layout">
           <div class="info">
+
             <article class="mini-card reveal">
               <h3>Email</h3>
-              <p class="muted">Best for recruiters and formal queries.</p>
-              <a class="link" href="mailto:anjenieuwenhuis@gmail.com">anjenieuwenhuis@gmail.com</a>
+              <p class="muted">Available for interviews and junior software engineering roles.</p>
+
+              <a class="link" href="mailto:anjenieuwenhuis@gmail.com">
+                <span class="link-icon" aria-hidden="true">
+                  <!-- Mail icon -->
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16v16H4z"></path>
+                    <path d="M22 6 12 13 2 6"></path>
+                  </svg>
+                </span>
+                anjenieuwenhuis@gmail.com
+              </a>
             </article>
 
             <article class="mini-card reveal">
               <h3>LinkedIn</h3>
               <p class="muted">Connect + send a message.</p>
+
               <a class="link" href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank" rel="noreferrer">
+                <span class="link-icon" aria-hidden="true">
+                  <!-- LinkedIn icon -->
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8.5H4.5V23H.5V8.5ZM8.5 8.5H12.3V10.5H12.35C12.88 9.5 14.18 8.4 16.1 8.4 20.1 8.4 20.8 11 20.8 14.4V23H16.8V15.2C16.8 13.3 16.8 10.9 14.2 10.9 11.6 10.9 11.2 13 11.2 15.1V23H7.2V8.5H8.5Z"/>
+                  </svg>
+                </span>
                 Anje Nieuwenhuis
               </a>
             </article>
@@ -70,7 +88,14 @@
             <article class="mini-card reveal">
               <h3>GitHub</h3>
               <p class="muted">Projects, code, and repositories.</p>
+
               <a class="link" href="https://github.com/anjetech" target="_blank" rel="noreferrer">
+                <span class="link-icon" aria-hidden="true">
+                  <!-- GitHub icon -->
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .5C5.73.5.75 5.64.75 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.26.79-.57v-2.1c-3.2.71-3.87-1.39-3.87-1.39-.53-1.38-1.29-1.74-1.29-1.74-1.05-.74.08-.73.08-.73 1.16.08 1.77 1.22 1.77 1.22 1.03 1.79 2.7 1.27 3.36.97.1-.76.4-1.27.72-1.56-2.56-.3-5.26-1.31-5.26-5.82 0-1.29.45-2.35 1.18-3.18-.12-.3-.51-1.53.11-3.19 0 0 .97-.31 3.18 1.21.92-.26 1.9-.38 2.88-.39.98.01 1.96.13 2.88.39 2.2-1.52 3.17-1.21 3.17-1.21.63 1.66.24 2.89.12 3.19.74.83 1.18 1.89 1.18 3.18 0 4.52-2.7 5.52-5.27 5.82.41.36.78 1.07.78 2.15v3.18c0 .32.21.69.8.57 4.56-1.52 7.85-5.83 7.85-10.91C23.25 5.64 18.27.5 12 .5Z"/>
+                  </svg>
+                </span>
                 github.com/anjetech
               </a>
             </article>
@@ -79,7 +104,7 @@
               <h4>Quick note</h4>
               <p>
                 I’m open to junior software engineering opportunities and projects that involve
-                web development, Java, databases, or Android.
+                web development, Java, databases, Android, or Software Development.
               </p>
             </div>
           </div>
@@ -87,33 +112,32 @@
           <div class="form-card reveal">
             <h3>Send a message</h3>
             <p class="muted">
-              This form is front-end only. If you want it to actually send emails,
-              I can help you connect it to Formspree or EmailJS.
+              Send a message directly from this form — it will email me instantly.
             </p>
 
-            <form class="contact-form" onsubmit="return false;">
+            <form class="contact-form" id="contactForm">
               <label>
                 Full Name
-                <input type="text" placeholder="Your name" />
+                <input type="text" name="from_name" placeholder="Your name" required />
               </label>
 
               <label>
                 Email
-                <input type="email" placeholder="you@example.com" />
+                <input type="email" name="from_email" placeholder="you@example.com" required />
               </label>
 
               <label>
                 Subject
-                <input type="text" placeholder="e.g. Junior role / Collaboration" />
+                <input type="text" name="subject" placeholder="e.g. Junior role / Opportunity" required />
               </label>
 
               <label>
                 Message
-                <textarea rows="6" placeholder="Write your message here..."></textarea>
+                <textarea name="message" rows="6" placeholder="Write your message here..." required></textarea>
               </label>
 
               <div class="form-actions">
-                <button class="btn primary" type="button" id="fakeSend">Send Message</button>
+                <button class="btn primary" type="submit" id="sendBtn">Send Message</button>
                 <a class="btn ghost" href="mailto:anjenieuwenhuis@gmail.com?subject=Portfolio%20Enquiry">Email Instead</a>
               </div>
 
@@ -156,12 +180,38 @@
 
   <script src="script.js"></script>
 
-  <script>
-    const fakeSend = document.getElementById("fakeSend");
-    const hint = document.getElementById("formHint");
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    fakeSend.addEventListener("click", () => {
-      hint.textContent = "This is a demo form. Use the Email Instead button or LinkedIn to contact me.";
+  <script>
+    emailjs.init("Bf49AObin4yKjXdxY");
+
+    const form = document.getElementById("contactForm");
+    const hint = document.getElementById("formHint");
+    const sendBtn = document.getElementById("sendBtn");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      sendBtn.disabled = true;
+      sendBtn.textContent = "Sending... ✨";
+      hint.classList.remove("ok", "err");
+      hint.textContent = "";
+
+      try {
+        await emailjs.sendForm("service_dejmvst", "template_z48c4uq", form);
+
+        hint.classList.add("ok");
+        hint.textContent = "Sent! 💌 Thanks for reaching out — I’ll reply soon.";
+        form.reset();
+      } catch (error) {
+        hint.classList.add("err");
+        hint.textContent = "Oops 😅 Something went wrong. Please use Email Instead.";
+        console.error(error);
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send Message";
+      }
     });
   </script>
 </body>

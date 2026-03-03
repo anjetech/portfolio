@@ -396,7 +396,8 @@ body{
    FOOTER (shared)
 ========================= */
 .footer{
-  margin-top: 62px;
+  /* add space inside the contact section instead */
+.contact-hero{ padding-bottom: 62px; }
   border-top: 1px solid var(--border);
   background: rgba(244,241,234,.75);
   backdrop-filter: blur(10px);
@@ -960,3 +961,151 @@ a.link:hover{
   }
 }
 
+/* ======================================================
+   CONTACT: spacing + equal card size + icons + green headings
+   (paste at bottom)
+====================================================== */
+
+/* more space between the stacked cards */
+.contact-hero .info{
+  display: grid;
+  gap: 16px; /* increase if you want more */
+}
+
+/* make the mini-cards feel equal height */
+.contact-hero .info .mini-card{
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* green headings on contact cards + quick note */
+.contact-hero .mini-card h3,
+.contact-hero .note h4{
+  color: var(--olive);
+}
+
+/* icon chip before each link */
+.contact-hero a.link{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-hero .link-icon{
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  border: 1px solid rgba(43,43,43,.12);
+  background: rgba(163,177,138,.22);
+  color: var(--olive);
+  flex: 0 0 30px;
+}
+
+.contact-hero .link-icon svg{
+  display: block;
+}
+
+/* Cute success / error message */
+#formHint{
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 800;
+  border: 1px solid rgba(43,43,43,.12);
+  background: rgba(244,241,234,.75);
+}
+
+#formHint.ok{
+  border-color: rgba(107,122,79,.35);
+  background: rgba(163,177,138,.22);
+  color: rgba(43,43,43,.9);
+}
+
+#formHint.err{
+  border-color: rgba(180,60,60,.25);
+  background: rgba(180,60,60,.08);
+  color: rgba(43,43,43,.9);
+}
+
+/* ======================================================
+   CONTACT: spacing + equal card size + icons + green headings
+====================================================== */
+
+/* more space between the stacked cards */
+.contact-hero .info{
+  display: grid;
+  gap: 16px; /* increase if you want more */
+}
+
+/* make the mini-cards feel equal height */
+.contact-hero .info .mini-card{
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* green headings on contact cards + quick note */
+.contact-hero .mini-card h3,
+.contact-hero .note h4{
+  color: var(--olive);
+}
+
+/* icon chip before each link */
+.contact-hero a.link{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-hero .link-icon{
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  border: 1px solid rgba(43,43,43,.12);
+  background: rgba(163,177,138,.22);
+  color: var(--olive);
+  flex: 0 0 30px;
+}
+
+.contact-hero .link-icon svg{
+  display: block;
+}
+
+/* ✅ hide hint until success/error (removes the blank "line") */
+#formHint{
+  display: none;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 800;
+  border: 1px solid rgba(43,43,43,.12);
+  background: rgba(244,241,234,.75);
+}
+
+#formHint.ok,
+#formHint.err{
+  display: block;
+}
+
+#formHint.ok{
+  border-color: rgba(107,122,79,.35);
+  background: rgba(163,177,138,.22);
+  color: rgba(43,43,43,.9);
+}
+
+#formHint.err{
+  border-color: rgba(180,60,60,.25);
+  background: rgba(180,60,60,.08);
+  color: rgba(43,43,43,.9);
+}
