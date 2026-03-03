@@ -1031,3 +1031,129 @@ a.link:hover{
 .contact-hero .layout{
   gap: 22px;
 }
+
+/* =========================
+   CONTACT RESPONSIVE FIXES
+   (paste at END of styles.css)
+========================= */
+
+/* Tablet + down */
+@media (max-width: 900px){
+
+  /* More side padding so text/cards don’t touch edges */
+  .contact-hero{
+    padding: 34px 0 44px;
+  }
+
+  /* If your wrap doesn't already have padding, force it */
+  .contact-hero .wrap{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Title/subtitle scale down so they don’t dominate */
+  .contact-hero .title{
+    font-size: clamp(28px, 6vw, 40px);
+    line-height: 1.05;
+  }
+  .contact-hero .subtitle{
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  /* Stack into one column earlier */
+  .contact-hero .layout{
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  /* Cards slightly tighter, but still comfy */
+  .mini-card,
+  .form-card,
+  .note{
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  /* Reduce background intensity */
+  .contact-hero .hero-bg .grid{
+    opacity: .18;
+    background-size: 44px 44px;
+  }
+
+  .contact-hero .hero-bg .blob{
+    width: 420px;
+    height: 420px;
+    filter: blur(34px);
+    opacity: .45;
+  }
+}
+
+/* Phone */
+@media (max-width: 600px){
+
+  /* Give the header section real breathing room */
+  .contact-hero{
+    padding: 26px 0 36px;
+  }
+
+  .section-label{
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+
+  /* Keep the title big but not “screen-filling” */
+  .contact-hero .title{
+    font-size: clamp(26px, 8vw, 34px);
+    letter-spacing: -0.01em;
+  }
+
+  /* Make subtitle less wide + easier to read */
+  .contact-hero .subtitle{
+    max-width: 38ch;
+  }
+
+  /* More spacing between blocks */
+  .contact-hero .layout{
+    gap: 14px;
+  }
+
+  /* Remove the left accent bar on small screens (it can look “tight”) */
+  .mini-card::before{
+    display: none;
+  }
+
+  /* Form buttons stack nicely */
+  .form-actions{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+  .form-actions .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Tone down background so text pops */
+  .contact-hero .hero-bg{
+    background:
+      radial-gradient(700px 320px at 30% 12%, rgba(163,177,138,.30), transparent 60%),
+      radial-gradient(700px 320px at 85% 18%, rgba(107,122,79,.20), transparent 55%),
+      linear-gradient(180deg, rgba(244,241,234,1) 0%, rgba(239,234,223,1) 100%);
+  }
+
+  /* Make grid less “busy” on small screens */
+  .contact-hero .hero-bg .grid{
+    opacity: .12;
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at 50% 10%, black 0 45%, transparent 75%);
+  }
+
+  /* Smaller blobs */
+  .contact-hero .hero-bg .blob{
+    width: 360px;
+    height: 360px;
+    opacity: .35;
+  }
+}
