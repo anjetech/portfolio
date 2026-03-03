@@ -148,8 +148,6 @@ body{
 
 /* ======================================================
    ✅ GLOBAL GREEN BACKGROUND (use everywhere)
-   Put this markup inside the section:
-   <div class="page-bg hero-bg"> ... </div>
 ====================================================== */
 .page-bg.hero-bg{
   position: absolute;
@@ -246,7 +244,9 @@ body{
 }
 
 /* =========================
-   BUTTONS (shared)
+   ✅ BUTTONS (UPDATED)
+   - Primary = GREEN everywhere
+   - Ghost = stays light grey
 ========================= */
 .btn{
   display:inline-flex;
@@ -263,16 +263,19 @@ body{
   border: 1px solid var(--border);
   cursor: pointer;
 
-  background: rgb(62, 61, 61);
-  color: white;
+  /* default: same as primary (green) so anything that was dark becomes green */
+  background: rgba(107,122,79,.95);
+  color: #fff;
 
-  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease, filter .2s ease;
   box-shadow: 0 10px 22px rgba(43,43,43,.08);
 }
 
 .btn.primary{
-  background: rgb(62, 61, 61);
-  color:  white;
+  background: rgba(107,122,79,.95);
+  color: #fff;
+  border: 1px solid rgba(43,43,43,.12);
+  box-shadow: 0 14px 30px rgba(43,43,43,.12);
 }
 
 .btn.ghost{
@@ -281,8 +284,13 @@ body{
 }
 
 .btn:hover{
-  background: rgba(43,43,43,.14);
   transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.btn.ghost:hover{
+  filter: none;
+  background: rgba(43,43,43,.12);
 }
 
 .btn.small{
@@ -451,29 +459,6 @@ body{
   flex-wrap: wrap;
 }
 
-.hero-stats{
-  margin-top: 18px;
-  display:flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-.stat{
-  padding: 10px 12px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  background: rgba(244,241,234,.65);
-}
-.stat-num{
-  display:block;
-  font-weight: 900;
-  letter-spacing: -.2px;
-}
-.stat-label{
-  display:block;
-  font-size: 12px;
-  color: var(--muted);
-}
-
 .grid-layout{
   max-width: 1200px;
   margin: 0 auto;
@@ -614,7 +599,6 @@ body{
   color: rgba(43,43,43,.85);
 }
 
-/* spacing after description */
 .project-card .project-desc{
   margin-bottom: 16px;
 }
@@ -642,8 +626,6 @@ body{
   flex: 0 0 10px;
 }
 .project-card .status-dot.red{ background: #d9534f; }
-
-.project-card .note-text{ line-height: 1.35; }
 
 .tech-stack{
   margin-top: 12px;
@@ -848,17 +830,7 @@ a.link:hover{
   box-shadow: 0 0 0 4px rgba(163,177,138,.28);
 }
 
-/* Buttons (contact primary only) */
-.contact-hero .btn.primary{
-  background: rgba(107,122,79,.95);
-  border: 1px solid rgba(43,43,43,.12);
-  box-shadow: 0 14px 30px rgba(43,43,43,.12);
-}
-.contact-hero .btn.primary:hover{ filter: brightness(1.05); }
-.contact-hero .btn.ghost{
-  background: rgba(244,241,234,.72);
-  border: 1px solid rgba(43,43,43,.14);
-}
+/* ✅ REMOVED: contact-only button overrides (not needed anymore) */
 
 /* =========================
    RESPONSIVE
@@ -986,40 +958,4 @@ a.link:hover{
     width: 100%;
     justify-content: center;
   }
-}
-
-/* =========================
-   GLOBAL PAGE BACKGROUND (use on ANY page)
-   Add <div class="page-bg hero-bg"> ... </div>
-========================= */
-.page-bg.hero-bg{
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Make the blobs have colors by default (your current .hero-bg .blob has no bg set unless you set it in HTML/page CSS) */
-.page-bg.hero-bg .blob-1{
-  width: 520px;
-  height: 520px;
-  left: -140px;
-  top: -180px;
-  background: rgba(163,177,138,.55);
-}
-.page-bg.hero-bg .blob-2{
-  width: 520px;
-  height: 520px;
-  right: -180px;
-  top: -160px;
-  background: rgba(107,122,79,.42);
-}
-
-/* Grid default */
-.page-bg.hero-bg .grid{
-  inset: -20px;
-  opacity: .28;
-  background-size: 56px 56px;
-  mask-image: radial-gradient(circle at 40% 20%, black 0 55%, transparent 75%);
 }

@@ -34,7 +34,8 @@
 
   <main class="content">
     <section class="contact-hero">
-      <div class="hero-bg" aria-hidden="true">
+      <!-- ✅ CHANGED: add page-bg -->
+      <div class="page-bg hero-bg" aria-hidden="true">
         <span class="blob blob-1"></span>
         <span class="blob blob-2"></span>
         <span class="grid"></span>
@@ -51,7 +52,6 @@
         </div>
 
         <div class="layout">
-          <!-- Left: Contact Info Cards -->
           <div class="info">
             <article class="mini-card reveal">
               <h3>Email</h3>
@@ -84,7 +84,6 @@
             </div>
           </div>
 
-          <!-- Right: Contact Form (front-end only) -->
           <div class="form-card reveal">
             <h3>Send a message</h3>
             <p class="muted">
@@ -157,7 +156,6 @@
 
   <script src="script.js"></script>
 
-  <!-- small page-specific JS -->
   <script>
     const fakeSend = document.getElementById("fakeSend");
     const hint = document.getElementById("formHint");
