@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anje | Software Engineering</title>
+  <title>Anje Nieuwenhuis | Junior Software Engineer</title>
+  <meta name="description" content="Portfolio of Anje Nieuwenhuis — BSc Software Engineering graduate specializing in web development, mobile applications, and Java-based systems." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Subtle mouse glow -->
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-gutter" aria-hidden="true"><div class="scroll-gutter-fill" id="scrollFill"></div></div>
 
   <header class="site-header" id="top">
     <nav class="navbar">
@@ -20,35 +25,31 @@
 
         <div class="nav-brand">
           <h1>Anje Nieuwenhuis</h1>
-          <h2>Junior Software Engineer</h2>
+          <span class="role">junior software engineer</span>
         </div>
       </div>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home" data-section="home" class="active"><span class="n">01</span>Home</a></li>
+        <li><a href="#about" data-section="about"><span class="n">02</span>About</a></li>
+        <li><a href="#work" data-section="work"><span class="n">03</span>Work</a></li>
+        <li><a href="#contact" data-section="contact"><span class="n">04</span>Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="content">
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <!-- ✅ background -->
-      <div class="page-bg hero-bg" aria-hidden="true">
-        <span class="blob blob-1"></span>
-        <span class="blob blob-2"></span>
-        <span class="grid"></span>
-      </div>
 
-      <div class="hero-inner">
+    <!-- ============ HOME ============ -->
+    <section class="hero" id="home">
+      <div class="page-bg" aria-hidden="true"><span class="glow"></span></div>
+
+      <div class="wrap hero-inner">
         <div class="hero-text reveal">
-          <p class="pill">Available for Junior Roles • Web developer</p>
+          <p class="pill"><span class="dot"></span> Available for Junior Roles • Web Developer</p>
 
           <h2 class="headline">
-            Building <span class="accent">Scalable Software</span> &
+            Building <span class="accent">Scalable Software</span> &amp;
             <span class="accent-2">Seamless User Experiences</span>
           </h2>
 
@@ -58,13 +59,14 @@
           </p>
 
           <div class="hero-actions">
-            <a href="work.html" class="btn primary">View My Work</a>
+            <a href="#work" class="btn primary">View My Work</a>
+            <a href="#contact" class="btn ghost">Get in Touch</a>
           </div>
         </div>
 
         <div class="hero-image reveal">
           <div class="image-frame">
-            <img src="Photos/anje.jpg" alt="Anje smiling" />
+            <img src="Photos/anje.jpeg" alt="Anje smiling" />
           </div>
           <div class="image-caption">
             <span class="dot"></span>
@@ -74,48 +76,328 @@
       </div>
     </section>
 
-    <!-- ABOUT / QUALIFICATIONS -->
-    <section class="grid-layout" id="about">
-      <div class="cards">
-        <article class="card reveal">
-          <h3>About Me</h3>
-          <p>
-            I am Anje Nieuwenhuis, a BSc Software Engineering graduate from Eduvos.
-            Over the past three years, I’ve built e-commerce platforms, mobile apps,
-            and Java-based systems that combine technical robustness with user-friendly design.
-            I thrive on problem-solving, collaboration, and creating software that makes an impact.
-          </p>
-          <div class="tags">
-            <span>Web</span><span>Java</span><span>Android</span><span>UI/UX</span>
-          </div>
-        </article>
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">About Me</span>
+          <h3 class="section-title">A software engineering graduate who builds structured, scalable systems.</h3>
+        </div>
 
-        <article class="card reveal">
-          <h3>Qualifications</h3>
-          <p>Bachelor of Science in Information Technology (Software Engineering), Eduvos (2023–2025)</p>
-          <div class="card-actions">
-            <a href="about.html" class="btn small">More About Me</a>
-            <a href="contact.html" class="btn small ghost">Contact</a>
-          </div>
-        </article>
-
-        <article class="card reveal highlight">
-          <h3>What I Build</h3>
-          <p>
-            Professional, responsive websites, Java systems, and Android apps — with clean UI,
-            working authentication, databases, and real features (not just demos).
+        <div class="about-top reveal" style="margin-top:32px;">
+          <p class="lede">
+            I'm Anje Nieuwenhuis, a BSc Information Technology (Software Engineering) graduate with a passion for creating modern, user-focused digital experiences. 
+            Throughout my studies, I developed web applications, Java software, and database-driven systems that strengthened both my technical and problem-solving skills. 
+            I enjoy turning ideas into practical solutions that are clean, functional, and easy to use.
           </p>
-          <ul class="mini-list">
-            <li>Responsive layouts</li>
-            <li>CRUD + database relationships</li>
-          </ul>
-        </article>
+          <div>
+            <p>
+              As an aspiring software developer, I'm excited to begin my professional career where I can continue learning, collaborate with experienced teams, and contribute to meaningful projects. 
+              I value clean code, attention to detail, and continuous improvement, and I'm always looking for opportunities to grow as a developer while delivering quality software.
+            </p>
+            <p>
+              Alongside software engineering, I enjoy designing modern websites that combine clean aesthetics with intuitive user experiences.
+            </p>
+          </div>
+        </div>
+
+        <div class="highlight-grid reveal">
+          <article class="mini-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
+            </span>
+            <h4>Scalable Web Systems</h4>
+            <p>Built full-stack applications with structured database relationships, authentication, and CRUD operations.</p>
+          </article>
+          <article class="mini-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M11 18h2"></path></svg>
+            </span>
+            <h4>Mobile &amp; Java Systems</h4>
+            <p>Developed Android applications and Java-based systems applying object-oriented design principles.</p>
+          </article>
+          <article class="mini-card">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"></path></svg>
+            </span>
+            <h4>Leadership &amp; Discipline</h4>
+            <p>Class Representative and Golden Key member demonstrating accountability, communication, and academic excellence.</p>
+          </article>
+        </div>
+
+        <div class="cards-3 reveal">
+          <article class="card">
+            <h3>Education</h3>
+            <p>
+              — Bachelor of Science in Information Technology (Software Engineering) <br />
+              Eduvos (2023 – 2025)
+            </p>
+            <p style="margin-top:10px;">
+              — Golden Key Honour Society Member <br />
+              — Class Representative (2025)
+            </p>
+
+            <div class="card-actions">
+              <a href="Anje_Nieuwenhuis_CV_Junior_Developer.pdf" class="btn small primary" target="_blank" rel="noreferrer">View CV</a>
+              <a href="Anje_Nieuwenhuis_Degree_Certificate.pdf" class="btn small ghost" target="_blank" rel="noreferrer">Degree Certificate</a>
+              <a href="Golden Key Member Certificate - Anje Nieuwenhuis .pdf" class="btn small ghost" target="_blank" rel="noreferrer">Golden Key Certificate</a>
+              <a href="Class Representatives .pdf" class="btn small ghost" target="_blank" rel="noreferrer">Class Rep Certificate</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Skills</h3>
+            <p><strong>Programming:</strong> Java, JavaScript, PHP, HTML, CSS, MySQL</p>
+            <p style="margin-top:8px;"><strong>Tools:</strong> VS Code, Git, GitHub, WampServer, Android Studio, NetBeans</p>
+
+            <div class="tags">
+              <span>Java</span><span>Web</span><span>MySQL</span><span>Android</span><span>GitHub</span>
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/anjetech" target="_blank" class="btn small primary" rel="noreferrer">View GitHub</a>
+              <a href="#work" class="btn small ghost">See My Work</a>
+            </div>
+          </article>
+
+          <article class="card accentcard">
+            <h3>What I'm Looking For</h3>
+            <p>
+              A junior developer position where I can contribute to production-level systems,
+              strengthen my backend and full-stack skills, and grow within a high-performing
+              engineering team.
+            </p>
+            <ul class="mini-list">
+              <li>Web or Java-based application development</li>
+              <li>Structured code reviews &amp; mentorship</li>
+              <li>Exposure to scalable system design</li>
+              <li>Continuous learning and technical growth</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">My Work</span>
+          <h3 class="section-title">Selected Projects</h3>
+          <p class="section-sub">
+            Carefully designed web and mobile applications showcasing full-stack development,
+            clean architecture, and scalable solutions.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="Photos/ZestyWear.png" alt="Zesty Wear Screenshot">
+            </div>
+            <div class="project-content">
+              <h3>Zesty Wear SA</h3>
+              <p class="project-sub">Consumer-to-Consumer (C-2-C) E-Commerce Website</p>
+              <p class="project-desc">
+                Consumer-to-consumer fashion marketplace that allows users to browse by category, register and log in, and list items for sale.
+                Built with a database-driven structure for managing users and products.
+              </p>
+              <p class="project-note">
+                <span class="status-dot"></span>
+                Demonstration provided via screenshots in preview. Source code available on GitHub.
+              </p>
+              <div class="tech-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+              </div>
+              <div class="project-buttons">
+                <a href="zestywearSA.html" class="btn primary">Preview</a>
+                <a href="https://github.com/anjetech/Zesty-Wear-SA" class="btn ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="Photos/wattway_logo.PNG" alt="WattWay Logo">
+            </div>
+            <div class="project-content">
+              <h3>WattWay</h3>
+              <p class="project-sub">EV Charging &amp; Load-Shedding Android App</p>
+              <p class="project-desc">
+                Android application that helps users locate EV charging stations on a map and view load-shedding schedules,
+                with secure authentication and database-driven features.
+              </p>
+              <p class="project-note">
+                <span class="status-dot"></span>
+                Demonstration provided via screenshots in preview. Source code available on GitHub.
+              </p>
+              <div class="tech-stack">
+                <span>Java</span><span>Android</span><span>Firebase</span><span>Google Maps</span><span>API Integration</span>
+              </div>
+              <div class="project-buttons">
+                <a href="wattway.html" class="btn primary">Preview</a>
+                <a href="https://github.com/anjetech/WattWay-App" class="btn ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="Photos/DigitalSystemJava.png" alt="Digital Insurance System Screenshot">
+            </div>
+            <div class="project-content">
+              <h3>Digital Insurance System</h3>
+              <p class="project-sub">JavaFX Desktop Application + SQL</p>
+              <p class="project-desc">
+                JavaFX desktop application for capturing customer and policy details, calculating premiums by policy type,
+                storing records in a SQL database, and displaying saved policies in a TableView.
+              </p>
+              <p class="project-note">
+                <span class="status-dot"></span>
+                Demonstration provided via screenshots in preview. Source code available on GitHub.
+              </p>
+              <div class="tech-stack">
+                <span>Java</span><span>JavaFX</span><span>SQL</span>
+              </div>
+              <div class="project-buttons">
+                <a href="digitalinsurance.html" class="btn primary">Preview</a>
+                <a href="https://github.com/anjetech/Digital-Insurance-Management-System-Java-Project" class="btn ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card reveal">
+            <div class="project-image">
+              <img src="Photos/F1.png" alt="F1 Reaction Time App Screenshot">
+            </div>
+            <div class="project-content">
+              <h3>F1 Reaction Time App</h3>
+              <p class="project-sub">Interactive Web Application</p>
+              <p class="project-desc">
+                Web app measuring user reaction speed using dynamic DOM manipulation.
+              </p>
+              <p class="project-note">
+                <span class="status-dot"></span>
+                Demonstration provided via screenshots in preview. Source code available on GitHub.
+              </p>
+              <div class="tech-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-buttons">
+                <a href="F1.html" class="btn primary">Preview</a>
+                <a href="https://github.com/anjetech/F1-React-Time-Website" class="btn ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Get In Touch</span>
+          <h3 class="section-title">Let's build something great.</h3>
+          <p class="section-sub">
+            If you'd like to connect about junior opportunities, projects, or collaborations —
+            send a message or use the quick links below.
+          </p>
+        </div>
+
+        <div class="contact-layout reveal">
+          <div class="contact-info">
+            <article class="mini-card">
+              <h4>Email</h4>
+              <p class="muted">Available for interviews and junior software engineering roles.</p>
+              <a class="link" href="mailto:anjenieuwenhuis@gmail.com">
+                <span class="link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 4h16v16H4z"></path>
+                    <path d="M22 6 12 13 2 6"></path>
+                  </svg>
+                </span>
+                anjenieuwenhuis@gmail.com
+              </a>
+            </article>
+
+            <article class="mini-card">
+              <h4>LinkedIn</h4>
+              <p class="muted">Connect + send a message.</p>
+              <a class="link" href="https://www.linkedin.com/in/anje-nieuwenhuis-541093207/" target="_blank" rel="noreferrer">
+                <span class="link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM.5 8.5H4.5V23H.5V8.5ZM8.5 8.5H12.3V10.5H12.35C12.88 9.5 14.18 8.4 16.1 8.4 20.1 8.4 20.8 11 20.8 14.4V23H16.8V15.2C16.8 13.3 16.8 10.9 14.2 10.9 11.6 10.9 11.2 13 11.2 15.1V23H7.2V8.5H8.5Z"/>
+                  </svg>
+                </span>
+                Anje Nieuwenhuis
+              </a>
+            </article>
+
+            <article class="mini-card">
+              <h4>GitHub</h4>
+              <p class="muted">Projects, code, and repositories.</p>
+              <a class="link" href="https://github.com/anjetech" target="_blank" rel="noreferrer">
+                <span class="link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .5C5.73.5.75 5.64.75 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.26.79-.57v-2.1c-3.2.71-3.87-1.39-3.87-1.39-.53-1.38-1.29-1.74-1.29-1.74-1.05-.74.08-.73.08-.73 1.16.08 1.77 1.22 1.77 1.22 1.03 1.79 2.7 1.27 3.36.97.1-.76.4-1.27.72-1.56-2.56-.3-5.26-1.31-5.26-5.82 0-1.29.45-2.35 1.18-3.18-.12-.3-.51-1.53.11-3.19 0 0 .97-.31 3.18 1.21.92-.26 1.9-.38 2.88-.39.98.01 1.96.13 2.88.39 2.2-1.52 3.17-1.21 3.17-1.21.63 1.66.24 2.89.12 3.19.74.83 1.18 1.89 1.18 3.18 0 4.52-2.7 5.52-5.27 5.82.41.36.78 1.07.78 2.15v3.18c0 .32.21.69.8.57 4.56-1.52 7.85-5.83 7.85-10.91C23.25 5.64 18.27.5 12 .5Z"/>
+                  </svg>
+                </span>
+                github.com/anjetech
+              </a>
+            </article>
+
+            <div class="note">
+              <h4>Quick note</h4>
+              <p>
+                I'm open to junior software engineering opportunities and projects that involve
+                web development, Java, databases, Android, or Software Development.
+              </p>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3>Send a message</h3>
+            <p class="muted">Send a message directly from this form — it will email me instantly.</p>
+
+            <form class="contact-form" id="contactForm">
+              <label>
+                Full Name
+                <input type="text" name="from_name" placeholder="Your name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="from_email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                Subject
+                <input type="text" name="subject" placeholder="e.g. Junior role / Opportunity" required />
+              </label>
+              <label>
+                Message
+                <textarea name="message" rows="6" placeholder="Write your message here..." required></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button class="btn primary" type="submit" id="sendBtn">Send Message</button>
+                <a class="btn ghost" href="mailto:anjenieuwenhuis@gmail.com?subject=Portfolio%20Enquiry">Email Instead</a>
+              </div>
+
+              <p class="tiny" id="formHint" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="footer-inner reveal">
       <div class="footer-left">
         <h3>Contact Me</h3>
@@ -129,7 +411,7 @@
       </div>
 
       <div class="footer-right">
-        <a class="btn primary" href="work.html">See Projects</a>
+        <a class="btn primary" href="#work">See Projects</a>
         <a class="btn ghost" href="#top">Back to Top</a>
       </div>
     </div>
@@ -140,5 +422,39 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init({ publicKey: "Bf49AObin4yKjXdxY" });
+
+    const form = document.getElementById("contactForm");
+    const hint = document.getElementById("formHint");
+    const sendBtn = document.getElementById("sendBtn");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      sendBtn.disabled = true;
+      sendBtn.textContent = "Sending...";
+      hint.classList.remove("ok", "err");
+      hint.textContent = "";
+
+      try {
+        await emailjs.sendForm("service_dejmvst", "template_z48c4uq", form);
+        hint.classList.add("ok");
+        hint.textContent = "Sent! Thanks for reaching out — I'll reply soon.";
+        form.reset();
+      } catch (error) {
+        hint.classList.add("err");
+        const detail = (error && (error.text || error.message)) ? ` (${error.text || error.message})` : "";
+        hint.textContent = "Something went wrong. Please use Email Instead." + detail;
+        console.error(error);
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Send Message";
+      }
+    });
+  </script>
 </body>
 </html>

@@ -6,13 +6,16 @@
   <title>Zesty Wear SA | Preview</title>
 
   <!-- Your shared site styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
   <!-- Preview-only styles -->
-  <link rel="stylesheet" href="preview.css" />
 </head>
 
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-gutter" aria-hidden="true"><div class="scroll-gutter-fill" id="scrollFill"></div></div>
 
   <header class="site-header" id="top">
     <nav class="navbar">
@@ -23,15 +26,15 @@
 
         <div class="nav-brand">
           <h1>Anje Nieuwenhuis</h1>
-          <h2>Junior Software Engineer</h2>
+          <span class="role">junior software engineer</span>
         </div>
       </div>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="work.html" class="active">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work" class="active">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -39,22 +42,18 @@
   <main class="content">
     <section class="preview-page">
       <!-- background like your other pages -->
-      <div class="hero-bg" aria-hidden="true">
-        <span class="blob blob-1"></span>
-        <span class="blob blob-2"></span>
-        <span class="grid"></span>
-      </div>
+      <div class="page-bg" aria-hidden="true"><span class="glow"></span></div>
 
       <div class="preview-wrap">
         <!-- breadcrumb / back -->
         <div class="preview-top reveal">
-          <a class="btn ghost" href="work.html">← Back to Work</a>
+          <a class="btn ghost" href="index.html#work">&larr; Back to Work</a>
         </div>
 
         <!-- header -->
         <div class="preview-hero reveal">
           <div class="preview-hero-left">
-            <span class="section-label">Project Preview</span>
+            <span class="eyebrow">Project Preview</span>
             <h2 class="preview-title">Zesty Wear SA</h2>
             <p class="preview-subtitle">Consumer-to-Consumer (C-2-C) E-Commerce Website</p>
 
@@ -101,7 +100,7 @@
             </ul>
           </div>
 
-          <div class="card highlight">
+          <div class="card accentcard">
             <h3>What I learned</h3>
             <ul class="mini-list">
               <li>How front-end and back-end work together in a real web app</li>
@@ -169,10 +168,6 @@
               <img src="Photos/zestywearsa/zesty-shoppingcart.png" alt="Zesty Wear SA - Shopping cart">
             </figure>
           </div>
-
-          <div class="preview-tip">
-            <span class="dot"></span>
-          </div>
         </div>
 
         <!-- project notes -->
@@ -199,7 +194,7 @@
         </div>
 
         <div class="preview-bottom reveal">
-          <a class="btn ghost" href="work.html">← Back to Work</a>
+          <a class="btn ghost" href="index.html#work">&larr; Back to Work</a>
           <a class="btn primary" href="#top">Back to Top</a>
         </div>
       </div>
@@ -220,7 +215,7 @@
       </div>
 
       <div class="footer-right">
-        <a class="btn primary" href="index.html">Home</a>
+        <a class="btn primary" href="index.html#home">Home</a>
         <a class="btn ghost" href="#top">Back to Top</a>
       </div>
     </div>

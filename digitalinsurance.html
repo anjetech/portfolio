@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Insurance Management System | Preview</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="preview.css" />
 </head>
 
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-gutter" aria-hidden="true"><div class="scroll-gutter-fill" id="scrollFill"></div></div>
 
   <header class="site-header" id="top">
     <nav class="navbar">
@@ -21,15 +24,15 @@
 
         <div class="nav-brand">
           <h1>Anje Nieuwenhuis</h1>
-          <h2>Junior Software Engineer</h2>
+          <span class="role">junior software engineer</span>
         </div>
       </div>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="work.html" class="active">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#work" class="active">Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -37,20 +40,16 @@
   <main class="content">
     <!-- ✅ ADD THIS CLASS (Digital Insurance only) -->
     <section class="preview-page preview-digital-insurance">
-      <div class="hero-bg" aria-hidden="true">
-        <span class="blob blob-1"></span>
-        <span class="blob blob-2"></span>
-        <span class="grid"></span>
-      </div>
+      <div class="page-bg" aria-hidden="true"><span class="glow"></span></div>
 
       <div class="preview-wrap">
         <div class="preview-top reveal">
-          <a class="btn ghost" href="work.html">← Back to Work</a>
+          <a class="btn ghost" href="index.html#work">&larr; Back to Work</a>
         </div>
 
         <div class="preview-hero reveal">
           <div class="preview-hero-left">
-            <span class="section-label">Project Preview</span>
+            <span class="eyebrow">Project Preview</span>
             <h2 class="preview-title">Digital Insurance Management System</h2>
             <p class="preview-subtitle">JavaFX Desktop App + MySQL (JDBC)</p>
 
@@ -94,7 +93,7 @@
             </ul>
           </div>
 
-          <div class="card highlight">
+          <div class="card accentcard">
             <h3>What I learned</h3>
             <ul class="mini-list">
               <li>Building JavaFX forms and wiring events cleanly</li>
@@ -124,10 +123,6 @@
               <img src="Photos/digital-insurance/database.png" alt="Insurance app - Database records">
             </figure>
           </div>
-
-          <div class="preview-tip">
-            <span class="dot"></span>
-          </div>
         </div>
 
         <div class="preview-section reveal">
@@ -153,7 +148,7 @@
         </div>
 
         <div class="preview-bottom reveal">
-          <a class="btn ghost" href="work.html">← Back to Work</a>
+          <a class="btn ghost" href="index.html#work">&larr; Back to Work</a>
           <a class="btn primary" href="#top">Back to Top</a>
         </div>
       </div>
@@ -174,7 +169,7 @@
       </div>
 
       <div class="footer-right">
-        <a class="btn primary" href="index.html">Home</a>
+        <a class="btn primary" href="index.html#home">Home</a>
         <a class="btn ghost" href="#top">Back to Top</a>
       </div>
     </div>
